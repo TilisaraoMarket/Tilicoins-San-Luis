@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tilicoins | Proyecto Simbólico para Tilisarao</title>
+  <meta name="description" content="Tilicoins, la moneda simbólica de Tilisarao. Un proyecto social y comercial impulsado por Mario Nievas para unir a la comunidad y sumar comercios.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-principal: #2e1c80;
+      --color-secundario: #22c55e;
+      --color-acento: #fbbf24;
+      --color-fondo: #f8f9fa;
+      --color-texto: #222;
+      --color-blanco: #fff;
+      --shadow: 0 4px 24px rgba(46,28,128,0.10);
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: var(--color-fondo);
+      color: var(--color-texto);
+    }
+    header {
+      background: linear-gradient(90deg, var(--color-principal) 70%, var(--color-secundario) 100%);
+      color: var(--color-blanco);
+      padding: 2.5rem 1rem 2rem 1rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.6rem;
+      margin: 0 0 0.5rem 0;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 0 0 1.2rem 0;
+    }
+    .cta-btn {
+      background: var(--color-acento);
+      color: var(--color-principal);
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(251,191,36,0.15);
+      transition: background 0.2s;
+      margin-top: 1rem;
+    }
+    .cta-btn:hover {
+      background: #f59e0b;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: var(--color-blanco);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 2.5rem 1.5rem;
+    }
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--color-principal);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .section {
+      margin-bottom: 2.5rem;
+    }
+    .benefits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-between;
+    }
+    .benefit {
+      flex: 1 1 220px;
+      background: var(--color-fondo);
+      border-radius: 12px;
+      padding: 1.2rem;
+      box-shadow: 0 2px 8px rgba(46,28,128,0.07);
+      text-align: center;
+    }
+    .benefit i {
+      font-size: 2.2rem;
+      color: var(--color-secundario);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-between;
+    }
+    .testimonial {
+      flex: 1 1 260px;
+      background: var(--color-fondo);
+      border-radius: 12px;
+      padding: 1.2rem;
+      box-shadow: 0 2px 8px rgba(251,191,36,0.07);
+      font-style: italic;
+      position: relative;
+    }
+    .testimonial:before {
+      content: "“";
+      font-size: 2.5rem;
+      color: var(--color-acento);
+      position: absolute;
+      left: 10px;
+      top: 5px;
+    }
+    .testimonial .author {
+      font-weight: bold;
+      color: var(--color-principal);
+      margin-top: 1rem;
+      display: block;
+      font-style: normal;
+    }
+    .mario-section {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      background: var(--color-fondo);
+      border-radius: 12px;
+      padding: 1.2rem;
+      box-shadow: 0 2px 8px rgba(46,28,128,0.07);
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    .mario-section img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--color-principal);
+    }
+    .mario-info {
+      flex: 1;
+    }
+    .mario-info h3 {
+      margin: 0 0 0.2rem 0;
+      color: var(--color-principal);
+      font-size: 1.2rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .mario-info p {
+      margin: 0.2rem 0;
+      font-size: 1rem;
+    }
+    .agradecimiento {
+      background: var(--color-secundario);
+      color: var(--color-blanco);
+      border-radius: 12px;
+      padding: 1.2rem;
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      box-shadow: 0 2px 8px rgba(34,197,94,0.07);
+    }
+    .comercios-section {
+      background: #ede9fe;
+      border-radius: 12px;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(46,28,128,0.07);
+    }
+    .comercios-section h2 {
+      color: var(--color-principal);
+      margin-bottom: 0.7rem;
+    }
+    .comercios-section p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    .comercios-section .cta-btn {
+      background: var(--color-principal);
+      color: var(--color-blanco);
+      margin: 0 auto;
+      display: inline-block;
+    }
+    .comercios-section .cta-btn:hover {
+      background: #3d2a99;
+    }
+    footer {
+      background: var(--color-principal);
+      color: var(--color-blanco);
+      text-align: center;
+      padding: 1.2rem 0;
+      border-radius: 0 0 18px 18px;
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+    @media (max-width: 700px) {
+      main {
+        padding: 1rem 0.5rem;
+      }
+      .benefits, .testimonials {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .mario-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tilicoins</h1>
+    <p>
+      La moneda simbólica de Tilisarao.<br>
+      Un proyecto social y comercial para unir a la comunidad y potenciar a los comercios locales.
+    </p>
+    <button class="cta-btn" onclick="document.getElementById('comercios').scrollIntoView({behavior:'smooth'})">
+      ¡Quiero sumar mi comercio!
+    </button>
+  </header>
+  <main>
+    <section class="section">
+      <h2>¿Qué es Tilicoin?</h2>
+      <p>
+        Tilicoin es una <strong>moneda simbólica</strong> creada para fortalecer el sentido de pertenencia, incentivar el comercio local y promover la colaboración en Tilisarao.<br>
+        No es una criptomoneda ni tiene valor legal, pero representa el compromiso de nuestra comunidad con el desarrollo y la innovación.<br>
+        <br>
+        <strong>¿Cómo funciona?</strong> Los Tilicoins se adquieren y canjean en comercios adheridos, siguiendo un proceso simple y transparente, donde la confianza y la autenticidad son clave.
+      </p>
+    </section>
+    <section class="section">
+      <h2>¿Por qué sumarte al proyecto?</h2>
+      <div class="benefits">
+        <div class="benefit">
+          <i class="fas fa-store"></i>
+          <strong>Impulsa tu comercio</strong>
+          <p>Participa en una red local que atrae nuevos clientes y fideliza a los actuales.</p>
+        </div>
+        <div class="benefit">
+          <i class="fas fa-users"></i>
+          <strong>Comunidad unida</strong>
+          <p>Forma parte de una iniciativa que une a vecinos, comercios y emprendedores.</p>
+        </div>
+        <div class="benefit">
+          <i class="fas fa-hand-holding-heart"></i>
+          <strong>Impacto social</strong>
+          <p>Colabora con proyectos solidarios y actividades que benefician a Tilisarao.</p>
+        </div>
+        <div class="benefit">
+          <i class="fas fa-lightbulb"></i>
+          <strong>Innovación local</strong>
+          <p>Adopta una idea original y creativa que pone a Tilisarao en el mapa.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2>Testimonios</h2>
+      <div class="testimonials">
+        <div class="testimonial">
+          Gracias a Tilicoin, mi comercio recibió nuevos clientes y pude participar en eventos solidarios. ¡Recomiendo sumarse!
+          <span class="author">— Ana López, comerciante</span>
+        </div>
+        <div class="testimonial">
+          Me encanta ver cómo la comunidad se une con esta moneda simbólica. ¡Vamos Tilisarao!
+          <span class="author">— Carlos Torres, vecino</span>
+        </div>
+        <div class="testimonial">
+          Tilicoin es una idea genial para apoyar a los comercios y crear sentido de pertenencia.
+          <span class="author">— Marta Ruiz, docente</span>
+        </div>
+      </div>
+    </section>
+    <section class="mario-section">
+      <img src="472739684_1362034135215633_330455342331853352_n.jpg" alt="Mario Nievas, gerente general">
+      <div class="mario-info">
+        <h3>Mario Nievas</h3>
+        <p>Gerente General e impulsor del proyecto Tilicoins</p>
+        <p>
+          <i class="fas fa-phone"></i> <strong>+54 9 2665 11-8400</strong><br>
+          <i class="fas fa-envelope"></i> <strong>mario.nievas@tilicoins.com</strong>
+        </p>
+      </div>
+    </section>
+    <div class="agradecimiento">
+      <i class="fas fa-heart"></i> <br>
+      <strong>¡Gracias Mario Nievas!</strong><br>
+      Por tu visión, dedicación y compromiso con Tilisarao.<br>
+      Este proyecto es posible gracias a tu liderazgo y pasión por la comunidad.
+    </div>
+    <section class="comercios-section" id="comercios">
+      <h2>¿Tenés un comercio?</h2>
+      <p>
+        Sumate a la red de Tilicoins y hacé crecer tu negocio.<br>
+        Es fácil, gratuito y te conecta con más vecinos.<br>
+        <br>
+        <strong>¿Cómo funciona?</strong> Los comercios adheridos pueden vender y canjear Tilicoins, generando movimiento y visibilidad.<br>
+        <br>
+        <strong>¿Querés ser parte?</strong> Hacé clic abajo y completá el formulario en la web de comercios:
+      </p>
+      <a href="https://tilisaraomarket.github.io/Tilicoins/" class="cta-btn" target="_blank">
+        <i class="fas fa-link"></i> Ir a la web de comercios y sumar mi local
+      </a>
+      <p style="margin-top:1.2rem; color:#555; font-size:0.95rem;">
+        (Si ya sos parte, encontrá tu comercio y compartí tu experiencia)
+      </p>
+    </section>
+  </main>
+  <footer>
+    © 2025 Tilicoins - Tilisarao. Proyecto simbólico impulsado por Mario Nievas.
+  </footer>
+</body>
+</html>
