@@ -1,0 +1,133 @@
+/* Tilicoins San Luis - Estilos para PDF/HTML generado desde Markdown */
+
+/* General */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8faf8;
+  color: #222;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 2em 2em 3em 2em;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+/* Títulos */
+h1, h2, h3 {
+  color: #1a6d3b;
+  font-family: 'Segoe UI Semibold', Arial, sans-serif;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.4em;
+  border-bottom: 3px solid #1a6d3b;
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.6em;
+  border-bottom: 2px solid #1a6d3b33;
+  padding-bottom: 0.2em;
+  margin-top: 2em;
+}
+
+h3 {
+  font-size: 1.15em;
+  color: #2b8c4b;
+  margin-top: 1.2em;
+  margin-bottom: 0.3em;
+}
+
+/* Enlaces */
+a {
+  color: #1a6d3b;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #2b8c4b;
+  text-decoration: underline;
+}
+
+/* Listas */
+ul, ol {
+  margin-left: 2em;
+  margin-bottom: 1em;
+  font-size: 1em;
+}
+
+/* FAQ: Preguntas y respuestas */
+h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.2em;
+  padding-left: 0.2em;
+  border-left: 4px solid #b6e2c6;
+  background: #eafbe7;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+h3 + p, h3 + ul, h3 + ol {
+  margin-left: 1em;
+  margin-bottom: 1.2em;
+}
+
+/* Bloques destacados */
+blockquote {
+  border-left: 4px solid #1a6d3b;
+  background: #eafbe7;
+  color: #1a3d2b;
+  padding: 0.8em 1.2em;
+  margin: 1.2em 0;
+  font-style: italic;
+}
+
+/* Contacto */
+ul:last-of-type {
+  background: #eafbe7;
+  border-radius: 8px;
+  padding: 1em 1.5em;
+  margin: 2em 0 1em 0;
+  border: 1px solid #b6e2c6;
+  list-style: none;
+}
+ul:last-of-type li {
+  margin-bottom: 0.5em;
+}
+
+/* Separadores */
+hr {
+  border: none;
+  border-top: 2px solid #b6e2c6;
+  margin: 2em 0;
+}
+
+/* Negritas y énfasis */
+strong, b {
+  color: #1a6d3b;
+}
+em, i {
+  color: #2b8c4b;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  color: #888;
+  font-size: 0.9em;
+  margin-top: 3em;
+}
+
+/* Responsive para impresión/PDF */
+@media print {
+  body {
+    box-shadow: none;
+    background: #fff;
+    padding: 0;
+    max-width: 100%;
+  }
+}
